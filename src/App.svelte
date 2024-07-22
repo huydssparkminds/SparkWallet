@@ -7,7 +7,7 @@
   import Activity from "./pages/Activity/Activity.svelte";
   import Modal from "@/components/Ui/Modal/Modal.svelte";
 
-  let routes = {
+  const routes = {
     "/": Dasboard,
     "/send&receive": Send,
     "/swap": Swap,
