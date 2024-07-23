@@ -42,7 +42,7 @@
     <Input options={op3}></Input>
     <p class="font-normal text-[#2F3C52]">
       <span class="font-bold">USDC verified on 16 sources</span>.Always confirm
-      the token address on a block explorer.
+      the token address on a <span class="underline">block explorer</span>.
     </p>
   </div>
   <h3 class="text-center font-bold mb-4 text-lg">Advanced Options</h3>
