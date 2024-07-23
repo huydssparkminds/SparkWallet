@@ -21,7 +21,7 @@
     <h3 class="font-bold text-2xl">{tabItems && tabItems.name}</h3>
     <div class="flex items-center">
       <span class="font-bold text-[36px] w-[100px]">
-        {hiddenMoney !== false ? "$0.00" : "******"}
+        {hiddenMoney !== true ? "$0.00" : "******"}
       </span>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
@@ -64,7 +64,7 @@
           <tbody>
             {#if tabItems.Tokens && tabItems.Tokens.length > 0}
               {#each tabItems.Tokens as token}
-                <tr class="bg-white border-b font-bold align-top">
+                <tr class="bg-white border-b font-bold align-top cursor-pointer hover:bg-gray-100">
                   <th scope="row" class="px-4 py-2 whitespace-nowrap">
                     <div class="flex gap-3 items-center">
                       <img src={token.icon} alt="icon" />
