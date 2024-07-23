@@ -1,9 +1,20 @@
 <script lang="ts">
-  export let activeBtn: boolean = false;
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
+
+  export let activeBtn: string;
+  export let btn: { name: string; icon?: string };
 </script>
 
-<button id="btnConnect" class:activeBtn>
-  <slot></slot>
+<button
+  id="btnConnect"
+  on:click={() => dispatch("btnActive", btn.name)}
+  class:activeBtn={activeBtn === btn.name}
+>
+  {#if btn.icon}
+    <img src={btn.icon} alt="Connect" />
+  {/if}
+  <span>{btn.name}</span>
 </button>
 
 <style>

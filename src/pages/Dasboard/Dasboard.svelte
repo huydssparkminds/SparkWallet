@@ -2,8 +2,7 @@
   import Add from "@/assets/add.png";
   import ava from "@/assets/ava.png";
   import wallet from "@/assets/solar_wallet-outline.png";
-  import arrowUp from "@/assets/arrowUp.svg";
-  import bitcoint from "@/assets/bitcoin.png";
+  import bitcoin from "@/assets/bitcoin.png";
   import eth from "@/assets/ETH.png";
   import type { Account, NameAccount } from "@/models/account";
   import TableContent from "./TableContent/TableContent.svelte";
@@ -13,7 +12,6 @@
     {
       id: 1,
       icon: wallet,
-      icon2: arrowUp,
       name: "Decentralized accounts",
       Tokens: [
         {
@@ -29,12 +27,12 @@
         },
         {
           id: 2,
-          icon: bitcoint,
+          icon: bitcoin,
           nameToken: "BTC",
           des: "Bitcoin",
           portfolio: 12.45,
           price: 63451.98,
-          ratio: +1.39,
+          ratio: 1.39,
           balance: 33241.12,
           desBalance: "0.5512 ETH",
         },
@@ -67,9 +65,6 @@
           on:click={() => handleClick(item)}
         >
           <img class="w-[60px] object-cover" alt="" src={item.icon} />
-          {#if item.icon2}
-            <img class="object-cover" alt="" src={item.icon2} />
-          {/if}
         </button>
       {/each}
     </div>
@@ -100,6 +95,6 @@
     background-color: #f5f5f5;
   }
   .activeTab {
-    background-color: #f5f5f5;
+    background-color: #e4e4e4;
   }
 </style>

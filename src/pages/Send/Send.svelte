@@ -2,6 +2,15 @@
   import TabReceive from "./Tabs/TabReceive.svelte";
   import TabSend from "./Tabs/TabSend.svelte";
 
+  type Option = {
+    name: string;
+    icon?: string;
+  };
+  const op1: Option[] = [
+    { name: "0x2622...a33ea5 (0x2622...a33ea5)" },
+    { name: "Decentralized accounts" },
+  ];
+
   type Tablist = "Send" | "Receive";
   let tab: Tablist = "Send";
 </script>
@@ -29,9 +38,9 @@
 
   <div class="">
     {#if tab === "Send"}
-      <TabSend />
+      <TabSend options={op1} />
     {:else}
-      <TabReceive />
+      <TabReceive options={op1} />
     {/if}
   </div>
 </div>
